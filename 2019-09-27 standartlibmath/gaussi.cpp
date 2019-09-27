@@ -19,7 +19,9 @@ int main()
   for (int n = 0; n < NSAMPLES; ++n) {
     double r = dis(gen);
     int idx = int(r/dx);
-    histo[idx] += 1;
+    if (0 <= idx and idx < nbins){
+      histo[idx] += 1;
+    }
   }
 
   for(int ii = 0; ii < nbins; ++ii) {
