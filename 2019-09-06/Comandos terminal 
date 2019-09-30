@@ -1,0 +1,195 @@
+bash-4.3$ git init  
+Initialized empty Git repository in /home/anmgomezmo/.git/
+bash-4.3$ git empty
+git: 'empty' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+bash-4.3$ cd HC/
+bash-4.3$ git init 
+Initialized empty Git repository in /home/anmgomezmo/HC/.git/
+bash-4.3$ git status 
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	2019-09-04/
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.3$ git add 2019-09-04/Holamundo.cpp
+bash-4.3$ git status 
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   2019-09-04/Holamundo.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+	2019-09-04/a.out
+
+bash-4.3$ git commit      
+reading /home/anmgomezmo/HC/.git/COMMIT_EDITMSG
+
+wrote /home/anmgomezmo/HC/.git/COMMIT_EDITMSG, 18 lines, 453 chars
+[master (root-commit) 4cb333b] ydfgiauyfgauydfgiiiiiiadfadfadiadsfadfadsfiadfadf
+ Committer: Andres Mauricio Gomez Mongui <anmgomezmo@darkstar.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 2019-09-04/Holamundo.cpp
+bash-4.3$ git commit
+On branch master
+Untracked files:
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+	2019-09-04/a.out
+
+nothing added to commit but untracked files present
+bash-4.3$ git commit
+On branch master
+Untracked files:
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+	2019-09-04/a.out
+
+nothing added to commit but untracked files present
+bash-4.3$ git add 2019-09-04/Holamundo.cpp
+bash-4.3$ git commit
+On branch master
+Untracked files:
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+	2019-09-04/a.out
+
+nothing added to commit but untracked files present
+bash-4.3$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+	2019-09-04/a.out
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.3$ emacs .gitignore & 
+[1] 14985
+bash-4.3$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	2019-09-04/Hola.x
+	2019-09-04/Holamundo.cpp~
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.3$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	2019-09-04/Hola.x
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.3$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.3$ git add .gitignore 
+bash-4.3$ git commit 
+reading /home/anmgomezmo/HC/.git/COMMIT_EDITMSG
+
+wrote /home/anmgomezmo/HC/.git/COMMIT_EDITMSG, 10 lines, 281 chars
+Aborting commit due to empty commit message.
+bash-4.3$ git commit -m "jnjn,nmnmnm,"
+[master f1dbc7c] jnjn,nmnmnm,
+ Committer: Andres Mauricio Gomez Mongui <anmgomezmo@darkstar.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+bash-4.3$ git status 
+On branch master
+nothing to commit, working directory clean
+bash-4.3$ ls
+2019-09-04
+bash-4.3$ git log 
+bash-4.3$ gitk
+bash-4.3$ clear
+
+bash-4.3$ ls
+2019-09-04
+bash-4.3$ git remote add origin https://github.com/anmgomezmo/HC.git
+bash-4.3$ git push -u origin master
+^C
+bash-4.3$ export https_proxy="https://anmgomezmo:Cuantica15@proxyapp.unal.edu.co:8080/"
+bash-4.3$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bash-4.3$ git push -u origin masterUsername for 'https://github.com': anmgomezmo
+Password for 'https://anmgomezmo@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/anmgomezmo/HC.git/'
+bash-4.3$ git push -u origin master
+Username for 'https://github.com': anmgomezmo
+Password for 'https://anmgomezmo@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 689 bytes | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/anmgomezmo/HC.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+bash-4.3$ 
+
