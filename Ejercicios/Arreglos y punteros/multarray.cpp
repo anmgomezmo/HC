@@ -1,34 +1,38 @@
 #include <cstdio>
 
-void A(void);
-void B(void);
+void A(int n,int m);
+void B(int n,int m);
 
 
 int main(void){
 
-  A();
-  B();
+  A(3,2);
+  B(3,2);
   
   return 0;
 }
 
 
-void A(void){
-  int A[3][2]={{0,1},{3,4},{}};
-  for(int i = 0;i < 3;++i){
-    for(int j = 0;j < 2;++j){
-      printf("%d \t",A[i][j]);
+void A(int n,int m){
+  for(int ii = 1;ii <= 1000000;++ii){
+    int A[n][m]={};
+    for(int i = 0;i < n;++i){
+      for(int j = 0;j < m;++j){
+	printf("%d \t",A[i][j]);
+      }
+      printf("\n");
     }
-    printf("\n");
   }
 }
 
-void B(void){
-  int B[3][2]={{0,1},{3,4},{}};
-  for(int j = 0;j < 2;++j){
-    for(int i = 0;i < 3;++i){
-      printf("%d \n",A[i][j]);
+void B(int n,int m){
+  for(int ii = 1;ii <= 1000000;++ii){
+    int B[n][m] = {};
+    for(int j = 0;j < m;++j){
+      for(int i = 0;i < n;++i){
+	printf("%d \n",B[i][j]);
+      }
+      printf("\n");
     }
-    printf("\n");
   }
 }
