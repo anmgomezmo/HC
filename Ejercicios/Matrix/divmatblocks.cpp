@@ -5,6 +5,8 @@
 
 
 int code_to_be_measured(const double *A, double *B);
+int code_to_be_measured_2(const double *A, double *B);
+int code_to_be_measured_3(const double *A, double *B);
 
 int main(void){
 
@@ -22,6 +24,10 @@ int main(void){
 
   printf("\n ---------------------------------------------------------- \n");
   code_to_be_measured(A,B);
+  printf("\n ---------------------------------------------------------- \n");
+  code_to_be_measured_2(A,B);
+  printf("\n ---------------------------------------------------------- \n");
+  code_to_be_measured_3(A,B);
 
   return 0;
 }
@@ -41,7 +47,54 @@ int code_to_be_measured(const double *A, double *B){
     }
   }
   
-    //}
+  //}
+  
+  return 0;
+}
+
+
+
+int code_to_be_measured_2(const double *A, double *B){
+
+  int N = 4;
+  double a[N][N],b[N][N],c[N][N] = {};
+
+  for(int i = 0;i < N*N;++i){
+    a[i/N][i%N] = A[i];
+    b[i/N][i%N] = B[i];
+  }
+  
+  for(int i = 0;i < N;++i){
+    for(int j = 0;j < N;++j){
+      for(int k = 1;k <= N;++k){
+	c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+      printf("%f \t",c[i][j]);
+    }
+  }
+  
+  return 0;
+}
+
+
+int code_to_be_measured_3(const double *A, double *B){
+
+  int N = 4, N_b = 2;
+  double a[N][N],b[N][N],c[N][N] = {};
+
+  for(int i = 0;i < N*N;++i){
+    a[i/N][i%N] = A[i];
+    b[i/N][i%N] = B[i];
+  }
+  
+  for(int i = 0;i < N_b;++i){
+    for(int j = 0;j < N_b;++j){
+      for(int k = 1;k <= N_b;++k){
+	c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+      printf("%f \t",c[i][j]);
+    }
+  }
   
   return 0;
 }
