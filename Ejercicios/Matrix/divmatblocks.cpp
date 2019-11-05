@@ -45,6 +45,7 @@ int code_to_be_measured(const double *A, double *B){
       A_m_n[j/N][j%N] = A[j];
       printf("%f \t",A_m_n[j/N][j%N]);
     }
+    printf("\n");
   }
   
   //}
@@ -71,6 +72,7 @@ int code_to_be_measured_2(const double *A, double *B){
       }
       printf("%f \t",c[i][j]);
     }
+    printf("\n");
   }
   
   return 0;
@@ -80,7 +82,7 @@ int code_to_be_measured_2(const double *A, double *B){
 int code_to_be_measured_3(const double *A, double *B){
 
   int N = 4, N_b = 2;
-  double a[N][N],b[N][N],c[N][N] = {};
+  double a[N][N],b[N][N],C[N][N] = {},c[N_b][N_b] = {};
 
   for(int i = 0;i < N*N;++i){
     a[i/N][i%N] = A[i];
@@ -89,11 +91,14 @@ int code_to_be_measured_3(const double *A, double *B){
   
   for(int i = 0;i < N_b;++i){
     for(int j = 0;j < N_b;++j){
-      for(int k = 1;k <= N_b;++k){
-	c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      for(int l = 0;l < N/N_b;++l){
+	for(int k = 0;k < N_b;++k){
+	  c[i][j] = c[i][j] + a[i][k] * b[k][j] + a[i][l] * b[l][j];
+	}
+	printf("%f \t",c[i][j]);
       }
-      printf("%f \t",c[i][j]);
     }
+    printf("\n");
   }
   
   return 0;
