@@ -14,7 +14,7 @@ int main(void){
 
 
 void A(int n,int m){
-  for(int ii = 1;ii <= 1000000;++ii){
+  for(int ii = 1;ii <= 100000;++ii){
     int A[n][m]={};
     for(int i = 0;i < n;++i){
       for(int j = 0;j < m;++j){
@@ -26,7 +26,7 @@ void A(int n,int m){
 }
 
 void B(int n,int m){
-  for(int ii = 1;ii <= 1000000;++ii){
+  for(int ii = 1;ii <= 100000;++ii){
     int B[n][m] = {};
     for(int j = 0;j < m;++j){
       for(int i = 0;i < n;++i){
